@@ -1,0 +1,35 @@
+Day 4 Assignment Question 2:
+
+Program to swap two numbers using pointers and functions. How to swap two numbers using call by reference method. Logic to swap two number using pointers in C program.
+
+
+
+#include <stdio.h>
+void swap(int * n1, int * n2);
+
+int main()
+{
+    int n1, n2;
+    printf("Enter two numbers: ");
+    scanf("%d%d", &n1, &n2);
+    printf("Before swapping in main n");
+    printf("Value of n1 = %d \n", n1);
+    printf("Value of n2 = %d \n\n", n2);
+    swap(&n1, &n2);
+    printf("After swapping in main n");
+    printf("Value of n1 = %d \n", n1);
+    printf("Value of n2 = %d \n\n", n2);
+
+    return 0;
+}
+
+    void swap(int * a, int * b)
+{
+    int temp;
+    temp = *a;
+    *a= *b;
+    *b= temp;
+    printf("After swapping in swap function n");
+    printf("Value of num1 = %d \n", *num1);
+    printf("Value of num2 = %d \n\n", *num2);
+}

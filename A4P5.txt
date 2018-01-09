@@ -1,0 +1,63 @@
+Day 4 Assignment Question 5:
+
+Programs for atoi() function,bool,malloc,calloc,free functions.
+
+ATOI FUNCTION
+
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main()
+{
+    char a[10] = "100";
+    int value = atoi(a);
+    printf("Value = %d\n", value);
+    return 0;
+}
+
+CALLOC FUNCTION
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+   int i, n;
+   int *a;
+
+   printf("Number of elements to be entered:");
+   scanf("%d",&n);
+   a = (int*)calloc(n, sizeof(int));
+   printf("Enter %d numbers:\n",n);
+   for( i=0 ; i < n ; i++ ) {
+      scanf("%d",&a[i]);
+   }
+   printf("The numbers entered are: ");
+   for( i=0 ; i < n ; i++ ) {
+      printf("%d ",a[i]);
+   }
+   free( a );
+   
+   return(0);
+}
+
+MALLOC FUNCTION
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+   char *str;
+   str = (char *) malloc(15);
+   strcpy(str, "tutorialspoint");
+   printf("String = %s,  Address = %u\n", str, str);
+   str = (char *) realloc(str, 25);
+   strcat(str, ".com");
+   printf("String = %s,  Address = %u\n", str, str);
+   free(str);
+   return(0);
+}
+
+
+
+
+
